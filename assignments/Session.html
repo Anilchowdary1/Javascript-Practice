@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        </script>
+    </head>
+
+    <body id="console-root">
+        <script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <script type="text/javascript">
+            //setHandler();
+            //walkAround();
+
+            function setHandler() {
+                try {
+                    const interestRate = 0.5;
+                    interestRate = 5;
+                    alert(interestRate);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+
+            function walkAround() {
+                try {
+                    //const name;
+                    //name = "Ramesh";
+                    //alert(name);
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            }
+            let myFunction = () => {
+                let headingObject = document.getElementById('demo');
+                if (headingObject.style.display === "none") {
+                    headingObject.style.display = "block";
+                    console.log('heading shown');
+                }
+                else {
+                    headingObject.style.display = "none";
+                    console.log('heading hidden');
+                }
+
+            }
+            let person = [
+                { name: 'Jhon', 'age': 12, 'Phone number': '9999999999' },
+                { name: 'Ram', 'age': 16, 'Phone number': '8888888899' },
+                { name: 'Ravi', 'age': 18, 'Phone number': '9099099999' },
+                { name: 'Rani', 'age': 24, 'Phone number': '99999990909' },
+                { name: 'Rohan', 'age': 26, 'Phone number': '8888999999' }
+            ];
+
+            function isEligibleTovoteInUs(age) {
+                return age >= 16;
+            }
+
+
+            function getCountOfEligibleVoters(people, isEligible) {
+                let count = 0;
+                for (let i = 0; i < people.length; i++) {
+
+                }
+                return count;
+            }
+            //console.log(getCountOfEligibleVoters(ObjectArray, isEligibleTovoteInIndia));
+            //console.log(getCountOfEligibleVoters(ObjectArray, isEligibleTovoteInUs));
+
+            let ages = [10, 33, 16, 55];
+
+            function isEligibleToVote(age) {
+                return age >= 18;
+            }
+
+            function isOdd(number) {
+                return (number % 2 !== 0);
+            }
+            let Input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            //let oddNumbers = person.filter(isOdd);
+            //console.log(oddNumbers);
+
+            function isEligibleTovoteInIndia(person) {
+                return person.age >= 18;
+            }
+            let eligibleVotersInIndia = person.filter(isEligibleTovoteInIndia);
+            eligibleVotersInIndia = eligibleVotersInIndia.map(person => person.name);
+            //console.log(eligibleVotersInIndia);
+            //for (let i = 0; i < eligibleVotersInIndia.length; i++) {
+            //console.log(eligibleVotersInIndia[i].name);
+            //}
+            ages = [32, 33, 16, 40];
+            //ages.forEach(age => console.log(age));
+
+            let numbers = [65, 44, 12, 4];
+            numbers.forEach(myFunctio);
+
+            function myFunctio(item, index, arr) {
+                arr[index] = item * 5;
+            }
+            //console.log(numbers);
+
+            function incrementBy2(age) {
+                return (age = age + 2);
+            }
+            let newAges = ages.map(incrementBy2);
+            //console.log(newAges);
+
+            let input = [3, 5, 6, 7, 8];
+            //console.log(input = input.map(number => number * 2));
+
+            ages = [20, 33, 16, 40];
+            let age = ages.find(age => age > 20);
+            //console.log(age);
+
+            input = [{ id: 1, name: 'Jhon' }, {
+                id: 2,
+                name: 'pete'
+            }, { id: 3, name: 'Mary' }];
+            let ID = input.find(person => person.name === 'Jhon').id;
+            //console.log(ID);
+
+            let cat = 'Miaow';
+            let dog = 'Woof';
+            let animals = {
+                cat,
+                dog
+            };
+            //console.log(animals.cat);
+            let car = {
+                color: 'red',
+                model: 'verna',
+            }
+            let { color } = car;
+            //console.log(color);
+
+            const teams = {
+                blue: 'Blue',
+                green: 'Green',
+                orange: 'orange',
+                white: 'White'
+            };
+            const { white, ...bgoTeams } = teams;
+            //console.log(bgoTeams);
+
+            function sumOfTwoNumbers(...args) {
+                let sum = 0;
+                for (let arg of args) {
+                    sum += arg;
+                }
+                return sum;
+            }
+            //console.log(sumOfTwoNumbers(1, 2, 3, 4, 5));
+
+            const first = [1, 2, 3, 4];
+            const second = [5, 6, 7];
+            const combined = [...first, 'a', ...second, 'b'];
+            //console.log(combined);
+
+            const name = 'iBHubs';
+            const letters = [...name];
+            //console.log(letters);
+
+            //21/02/2020
+        </script>
+
+        <!--<h1 id='demo'>My Page</h1>
+        <button onclick="myFunction()">Toggler</button>-->
+
+    </body>
+
+</html>

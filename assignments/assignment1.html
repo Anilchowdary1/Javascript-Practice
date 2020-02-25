@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+    </head>
+
+    <body>
+        <h1>Javascript assignments</h1>
+        <p>Remove comments of desired Question function call to get output!</p>
+        <script>
+            function Q1(msg) {
+                alert(msg);
+            }
+            Q1("Welcome!");
+            //Q1("You progress, the nation follows");
+
+            function Q2() {
+                alert("You progress,\nthe nation follows");
+            }
+            // Q2()
+
+            function Q3() {
+                alert(prompt(""));
+            }
+            //Q3()
+            function Q4() {
+                alert(prompt());
+            }
+            //Q4()
+
+            function Q5() {
+                let name = "Jhon";
+                let copiedName = name
+                alert(copiedName)
+            }
+            //Q5();
+            function Q6() {
+                let a;
+                alert(a);
+            }
+            //Q6();
+            function Q7(val) {
+                alert(typeof(val));
+            }
+            //Q7();
+
+            function Q8(name) {
+                alert(`Congratulations ${name}`)
+            }
+            //Q8(prompt(""));
+            function Q9(a, b) {
+                let temp = a;
+                a = b;
+                b = temp;
+                alert(`${a} ${b}`);
+            }
+            //Q9(2, 4);
+            function Q10(a, b) {
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                alert(`${a} ${b}`);
+            }
+            //Q10(5, 6);
+
+            function Q11(a, b) {
+                alert((a + b) / 2);
+            }
+            //Q11(4.8, 5.6);
+            function Q12(a, b) {
+                let c = a - b;
+                alert(c / 15);
+            }
+            //Q12(153.45, 168.45)
+            function Q13(a, b, c, d, e) {
+                let total = a + b + c + d + e;
+                let per = (total / 500) * 100;
+                alert(`Total: ${total}, Percentage: ${per}`);
+            }
+            //Q13(100, 100, 100, 100, 36)
+            function Q14(b, h) {
+                alert(0.5 * b * h);
+            }
+            //Q14(12, 5);
+            function Q15(r) {
+                let square = Math.pow(r, 2);
+                alert(3.14 * square);
+            }
+            //Q15(0)
+            function Q16(p) {
+                let pi = 3.14;
+                let radius = p / (2 * pi);
+                let r = Math.pow(radius, 2);
+                alert(pi * r);
+            }
+            //Q16(25.12);
+            function Q17(p, l) {
+                let pi = 3.14;
+                let radius = p / (2 * pi);
+                let r = Math.pow(radius, 2);
+                let area = pi * r;
+                alert(area / l);
+            }
+            //Q17(25.12, 5);
+            function Q18(F) {
+                let C = (F - 32) * 5 / 9;
+                alert(C);
+            }
+            //Q18(437);
+            function Q19(C) {
+                let F = (C * 9 / 5) + 32;
+                alert(F);
+            }
+            //Q19(225);
+            function Q20(pay, h) {
+                let m = h / 12;
+                let monthly_pay = m * pay;
+                alert(monthly_pay);
+            }
+            //Q20(120, 5000);
+
+            function Q21(days) {
+                let years = parseInt(days / 365);
+                days = days - years * 365;
+                let months = parseInt(days / 30);
+                days = days - months * 30;
+                let weeks = parseInt(days / 7);
+                days = days - weeks * 7
+                alert(`Years: ${years}, Months: ${months}, Weeks: ${weeks}, Days: ${days}`);
+            }
+            //Q21(675);
+            function Q22(y, m, w, d) {
+                let days = y * 365;
+                days += m * 30;
+                days += w * 7;
+                days += d;
+                alert(days);
+            }
+            //Q22(1, 10, 1, 3);
+            function Q23(m) {
+                let hun = parseInt(m / 100);
+                m -= hun * 100;
+                let fif = parseInt(m / 50);
+                m -= fif * 50;
+                let twe = parseInt(m / 20);
+                m -= twe * 20;
+                let ten = parseInt(m / 10);
+                alert(`100 notes count: ${hun}, 50 notes count: ${fif}, 20 notes count: ${twe}, 10 notes count: ${ten}`);
+            }
+            //Q23(680);
+            function Q24(score, balls) {
+                alert((score / balls) * 100);
+            }
+            //Q24(21, 14);
+            function Q25(runs) {
+                alert(runs / 50);
+            }
+            //Q25(275);
+            function Q26(n) {
+                alert(n * (n - 1) / 2);
+            }
+            //Q26(68);
+
+            function Q27(a, b, c, d, e) {
+                alert(a * a + b * b + c * c + d * d + e * e);
+            }
+            // Q27(0, -2, 2.4, -11, -0.3);
+            function Q28(first, last) {
+                alert(first + last);
+            }
+            //Q28(prompt(""), prompt(""));
+
+            function Q29(first, last) {
+                alert(first % last);
+            }
+            //Q29(12, 5);
+            function Q30(n) {
+                //n = n.toFixed(2);
+                alert(++n);
+            }
+            //Q30(20.8655);
+
+            function Q31(n) {
+                alert(--n);
+            }
+            //Q31(20);
+        </script>
+    </body>
+
+</html>

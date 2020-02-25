@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+    </head>
+
+    <body>
+
+        <script>
+            //15/02/2020
+            let h1Element = document.createElement("h1");
+            h1Element.textContent = "New Heading!!!";
+            document.body.appendChild(h1Element);
+
+            let pElement = document.createElement("p");
+            pElement.textContent = 'sample text paragraph';
+            document.body.appendChild(pElement);
+
+            let button = document.createElement("button");
+            button.innerHTML = "Click Me";
+            button.onclick = () => alert("You clicked Me!");
+            document.body.appendChild(button);
+
+            let img = document.createElement("img");
+            img.src = "Portfolio-website/avatar.png";
+            img.alt = "image";
+            img.onclick = () => alert("image clicked");
+            document.body.appendChild(img);
+
+            function MyFunction() {
+                let headingObject = document.getElementById("demo");
+                headingObject.innerHTML = 'Hello JS';
+            }
+        </script>
+        <h1 id="demo">This is heading</h1>
+        <button onclick="MyFunction()">Change heading</button>
+    </body>
+
+</html>

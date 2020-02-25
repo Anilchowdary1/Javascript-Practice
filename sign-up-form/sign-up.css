@@ -1,0 +1,198 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form {
+    max-width: 720px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: Arial;
+    background-color: #0099cc;
+    background-image: linear-gradient(to right, #0099cc, #a300cc);
+}
+
+.container {
+    padding: 3%;
+    margin: 5%;
+    background-color: white;
+    font-family: Arial;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.select-colors {
+    color: white;
+    margin-top: 10px;
+    padding-top: 10px;
+    display: flex;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.select-colors input {
+    margin-left: 5px;
+
+    height: 15px;
+    width: 35px;
+    border: none;
+    border-radius: 0;
+
+}
+
+.login {
+    color: white;
+    padding-bottom: 20px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.form-element input {
+    width: 97%;
+}
+
+.first-name {
+    width: 46%
+}
+
+.last-name {
+    width: 46%;
+}
+
+.form-element input,
+.user-name input {
+    margin-bottom: 15px;
+    height: 30px;
+    border-color: white;
+    background-color: #f1f1f1;
+    border-radius: 2%;
+
+}
+
+.select-branch input {
+    width: 30%;
+}
+
+.select-branch input,
+textarea {
+    border-radius: 0;
+    border-color: grey;
+}
+
+p,
+label {
+    font-size: 12px;
+    color: grey;
+}
+
+.gender,
+.select-branch,
+.address,
+.typing-speed,
+.terms,
+.submit {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: grey;
+}
+
+.gender input {
+    margin-left: 42px;
+}
+
+.gender span {
+    font-size: 12px;
+}
+
+.select-branch .dob {
+    font-size: 12px;
+    margin-left: auto;
+}
+
+.address {
+    display: flex;
+}
+
+.address textarea {
+    flex-grow: 1;
+}
+
+.typing-speed input {
+    width: 100%;
+}
+
+.terms span {
+    color: #00ace6;
+}
+
+.submit {
+    justify-content: center;
+}
+
+.signup-button {
+    background-color: #00ace6;
+    height: 40px;
+    width: 100px;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    border: none;
+    border-radius: 0;
+
+}
+
+#toast {
+    visibility: hidden;
+    max-width: 350px;
+    height: 50px;
+    margin: auto;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    font-size: 17px;
+    white-space: nowrap;
+}
+
+#toast #desc {
+    color: #fff;
+    font-size: 15px;
+    font-family: Arial;
+    font-weight: 500;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#toast.show {
+    visibility: visible;
+    animation: fadein 0.3s, stay 3s 1s;
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 60px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes stay {
+    from {
+        min-width: 350px
+    }
+    to {
+        min-width: 350px
+    }
+}

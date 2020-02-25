@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Assignment-2</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    </head>
+
+    <body>
+        <!--<div id="console-root"></div>-->
+        <script src="https://s3-ap-southeast-1.amazonaws.com/beta.tap.ibhubs.in/console.js"></script>
+        <script>
+            function Q1() {
+                let arr = ['hello', 1];
+                document.write("<h1>Question-1</h1>\n<b>Output:</b><br>newArray: [" + arr + ']');
+            }
+            Q1()
+
+            function Q2() {
+                let nested_arr = [
+                    ['Bulls', 23, [1, 2, 3, 4, 5, ["one", 'two', 'three']]],
+                    ['white sox', 45]
+                ];
+                document.write("<h1>Question-2</h1>\n<b>Output:</b><br>nested Array: [" + nested_arr + ']');
+            }
+            Q2();
+
+            function Q3(a, b) {
+                let arr = [a, b];
+                document.write("<h1>Question-3</h1>\n<b>Output:</b><br>newArray: [" + arr + ']');
+            }
+            Q3(2, 4);
+
+            function Q4() {
+                let myArray = [18, 64, 99];
+                myArray[0] = 45;
+                myArray[1] = 64;
+                myArray[2] = 'fifty four';
+                document.write("<h1>Question-4</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q4();
+
+            function Q5() {
+                let arr = [
+                    [1, 2, 3],
+                    [4, 5, 6],
+                    [7, 8, 9],
+                    [
+                        [10, 11, 12], 13, 14
+                    ]
+                ];
+                //alert(arr[2][1]);
+                //alert(arr[3][0][2]);
+                document.write("<h1>Question-5</h1>\n<b>Output:</b><br>" + arr[2][1] + "<br>" + arr[3][0][2]);
+            }
+            Q5();
+
+            function Q6() {
+                let myArray = ['Jhon', [2], 23];
+                myArray.push(['dog', 3]);
+                //console.log(myArray);
+                document.write("<h1>Question-6</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q6();
+            let myArray = ['jhon', [2], 3];
+
+            function Q7() {
+                //alert(myArray.length);
+                document.write("<h1>Question-7</h1>\n<b>Output:</b><br>" + myArray.length);
+            }
+            Q7();
+
+            function Q8() {
+                //console.log(myArray.pop());
+                document.write("<h1>Question-8</h1>\n<b>Output:</b><br>" + myArray.pop());
+            }
+            Q8();
+
+            function Q9() {
+                //console.log(myArray.shift());
+                document.write("<h1>Question-9</h1>\n<b>Output:</b><br> " + myArray.shift());
+            }
+            Q9();
+
+            function Q10() {
+                myArray.unshift("Good morning");
+                //console.log(myArray);
+                document.write("<h1>Question-10</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q10();
+            //let myArray = ['jhon', 2, 3];
+            //console.log(myArray);
+
+            function Q11() {
+                //console.log(myArray);
+                myArray.splice(1, 1);
+                //console.log(myArray);
+                document.write("<h1>Question-11</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q11();
+
+            function Q12() {
+                myArray = [2, 4, 5, 1, 7, 5, 2, 1]
+                myArray.splice(1, 4);
+                document.write("<h1>Question-12</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q12();
+
+            function Q13() {
+                myArray = [10, 11, 12, 13, 14, 15];
+                let arr = myArray.slice(2, 4);
+                //console.log(arr);
+                document.write("<h1>Question-13</h1>\n<b>Output:</b><br>newArray: [" + arr + ']');
+            }
+            Q13();
+
+            function Q14() {
+                myArray = [1, 'two', 3, 'four'];
+                //console.log(myArray.indexOf(3));
+                document.write("<h1>Question-14</h1>\n<b>Output:</b><br>IndexOf(3): " + myArray.indexOf(3));
+            }
+            Q14();
+
+            function Q15() {
+                myArray = [1, 'two', 3, 'four'];
+                //console.log(myArray.indexOf(5));
+                document.write("<h1>Question-15</h1>\n<b>Output:</b><br>IndexOf(5): " + myArray.indexOf(5));
+            }
+            Q15();
+
+            function Q16() {
+                myArray = [1, ['two', 3], 'four'];
+                //console.log(myArray[1].indexOf('two'));
+                document.write("<h1>Question-16</h1>\n<b>Output:</b><br>IndexOf('two'): " + myArray[1].indexOf('two'));
+            }
+            Q16();
+
+            function Q17() {
+                myArray = ['a', 'b', 'a', 'a', 'e', 'a', 'f'];
+                //console.log(myArray.lastIndexOf('a'));
+                document.write("<h1>Question-17</h1>\n<b>Output:</b><br>lastIndexOf('a'): " + myArray.lastIndexOf('a'));
+            }
+            Q17();
+
+            function Q18() {
+                myArray = [1, ['two', 3], 'four'];
+                myArray[myArray.length] = 'new element';
+                document.write("<h1>Question-18</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q18();
+
+            function Q19() {
+                myArray = [1, ['two', 3], 'four'];
+                myArray.push('new element', 12, 15, 16, 17);
+                document.write("<h1>Question-19</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q19();
+
+            function Q20() {
+                myArray = [1, ['two', 3], 'four'];
+                myArray = myArray.concat([2, 4])
+                document.write("<h1>Question-20</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q20();
+
+            function Q21() {
+                myArray = ['a', 'b', 'c', 'd', 'e', 'f', 'g'];
+                myArray.splice(4, 3, "one", "two", "three");
+                document.write("<h1>Question-21</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q21();
+
+            function Q22() {
+                myArray = [10, 11, 12, 12, 15];
+                myArray.splice(3, 2, 13, 14, 15);
+                document.write("<h1>Question-22</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q22();
+
+            function Q23() {
+                myArray = [2, 4, 1, 0, 5];
+                myArray.sort();
+                document.write("<h1>Question-23</h1>\n<b>Output:</b><br>newArray: [" + myArray + ']');
+            }
+            Q23();
+
+            function Q24() {
+                myArray = ['Hello', 'Good', 'Morning'];
+                document.write("<h1>Question-24</h1>\n<b>Output:</b><br>newArray: " + myArray.join(' '));
+            }
+            Q24();
+
+            function Q25() {
+                myArray = [2, 4, 1, 0, 5];
+                document.write("<h1>Question-25</h1>\n<b>Output:</b><br>newArray: [" + myArray.reverse() + ']');
+            }
+            Q25();
+
+            function Q26() {
+                let costumes = {
+                    'hat': 'ballcap',
+                    'shirt': 'jersey',
+                    'shoes': 'cleats'
+                }
+                document.write(`<h1>Question-26</h1>\n<b>Output:</b><br> ${costumes.hat}<br> ${costumes.shirt}<br>${costumes.shoes}`);
+            }
+            Q26();
+
+            function Q27() {
+                let car = {
+                    "model name": "verna",
+                    "fuel type": "petrol",
+                    "drive mode": "manual"
+                }
+                document.write(`<h1>Question-27</h1>\n<b>Output:</b><br> ${car['model name']}<br> ${car['fuel type']}<br>${car['drive mode']}`);
+            }
+            Q27();
+            let myDog = {
+                'name': 'Coder',
+                'legs': 4,
+                'tails': 1,
+                'friends': ["puppie"]
+            }
+
+            function Q28() {
+                myDog.name = 'Kimmie';
+                document.write(`<h1>Question-28</h1>\n<b>Output:</b><br> ${myDog['name']}`);
+            }
+            Q28();
+
+            function Q29() {
+                myDog.bark = 'woof';
+                document.write(`<h1>Question-29</h1>\n<b>Output:</b><br> ${myDog['bark']}`);
+            }
+            Q29();
+
+            function Q30() {
+                delete myDog.tails;
+                document.write(`<h1>Question-30</h1>\n<b>Output:</b><br> ${myDog['tails']}`);
+            }
+            Q30();
+
+            function Q31() {
+                let positions = {
+                    top: 'hat',
+                    bottom: 'pants'
+                };
+
+                function isPropertyExists(obj, property) {
+                    /*if (obj.hasOwnProperty(property)) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }*/
+                    return obj.hasOwnProperty(property);
+                }
+                document.write(`<h1>Question-31</h1>\n<b>Output:</b><br> ${isPropertyExists(positions,'bottom')}<br>${isPropertyExists(positions,'middle')}`);
+            }
+            Q31();
+        </script>
+    </body>
+
+</html>

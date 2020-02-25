@@ -1,0 +1,15 @@
+Instructions
+
+Let's divide UI as Left Component and Right Component
+
+Left Component:
+* Background color should be changed when user clicked on R or G or B buttons
+* R,G,B button background colors should be changed on hover
+* Component height should increase when user click on down arrow by 10px
+* Component height should decrease when user click on up arrow by 10px
+* Left Component & Right Component should be swapped when user click on respective arrows
+
+Right Component:
+* Background color should be changed when user click on R or G or B buttons
+* R,G,B button background colors should be changed on hover
+* Vertical components should be swapped when user click respective arrows

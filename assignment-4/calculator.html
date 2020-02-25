@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+
+  <body>
+    <script src="https://tap.ibhubs.in/utils/console.js"></script>
+    <div class="calculator">
+      <input id='output' type="text" class="calculator-screen" value=0 />
+      <div class="calculator-keys">
+        <button type="button" class="operator" onclick='updateExpression("+","operator")'>+</button>
+        <button type="button" class="operator" onclick='updateExpression("-","operator")'>-</button>
+        <button type="button" class="operator" onclick='updateExpression("*","operator")'>&times;</button>
+        <button type="button" class="operator" onclick='updateExpression("/","operator")'>&divide;</button>
+
+        <button type="button" onclick='updateExpression("7","digit")'>7</button>
+        <button type="button" onclick='updateExpression("8","digit")'>8</button>
+        <button type="button" onclick='updateExpression("9","digit")'>9</button>
+
+        <button type="button" onclick='updateExpression("4","digit")'>4</button>
+        <button type="button" onclick='updateExpression("5","digit")'>5</button>
+        <button type="button" onclick='updateExpression("6","digit")'>6</button>
+
+        <button type="button" onclick='updateExpression("1","digit")'>1</button>
+        <button type="button" onclick='updateExpression("2","digit")'>2</button>
+        <button type="button" onclick='updateExpression("3","digit")'>3</button>
+
+        <button type="button" onclick='updateExpression("0","digit")'>0</button>
+        <button type="button" onclick='updateExpression(".","digit")'>.</button>
+        <button type="button" class="all-clear" value="all-clear" onclick='updateExpression()'>AC</button>
+
+        <button type="button" class="equal-sign operator" value="=" onclick='getExpressionOutput()'>=</button>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Assignment 7</title>
+    </head>
+
+    <body id='console-root'>
+        <script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <script type="text/javascript">
+            function startsWithTendWithR(array) {
+                return array.filter(words => (words.startsWith('t') || words.endsWith('r')));
+
+            }
+            console.log('Question-1');
+            console.log(startsWithTendWithR(['teacher', 'friend', 'cricket', 'farmer', 'rose', 'talent', 'trainer']));
+            console.log(startsWithTendWithR(['dream', 'player', 'read', 'write', 'trend']));
+            console.log(startsWithTendWithR(['rest', 'more', 'regret', 'tree']));
+            console.log();
+
+            const uniqueCharacters = (value, index, array) => {
+                return array.indexOf(value) === index;
+            }
+
+            function filterUniqueCharacters(sentence) {
+                return sentence.split('').filter(uniqueCharacters);
+            }
+            console.log('Question-2');
+            console.log(filterUniqueCharacters('Was it a cat I saw?'));
+            console.log(filterUniqueCharacters('I did, did I?'));
+            console.log(filterUniqueCharacters('Be proactive'));
+            console.log();
+
+            function changeToUppercase(Array) {
+                return Array = Array.map(word => word.toUpperCase());
+            }
+            console.log('Question-3');
+            console.log(changeToUppercase(['Cyber Security', 'Data Analytics', 'Blockchain', 'IoT']));
+            console.log(changeToUppercase(['Raj', 'Viraj', 'Ram', 'Vikram']));
+            console.log();
+
+            const squareNumbers = (value, index, array) => {
+                return index % 2 === 0 ? value ** 2 : value;
+            }
+            const squareAlternateNumbers = (array) => {
+                return array.map(squareNumbers);
+            }
+            console.log('Question-4');
+            console.log(squareAlternateNumbers([5, 1, 9, 6, 15]));
+            console.log(squareAlternateNumbers([3, 14, 12, 1, 7, 0]));
+            console.log();
+
+            function isString(array) {
+                return array.every(element => typeof(element) === 'string');
+            }
+            console.log('Question-5');
+            console.log(isString(['5', 1, '9', '6', '15']));
+            console.log(isString(['i', 'B', 'H', 'u', 'b', 's']));
+            console.log(isString(['HTML', 'CSS', 'Javascript', 'React']));
+            console.log();
+
+            function isPalindromeString(str) {
+                str = str.toLowerCase();
+                let revStr = str.split('').reverse().join('');
+                if (str === revStr) {
+                    return true;
+                }
+                return false;
+
+            }
+
+            function isPalindrome(array) {
+                return array.some(element => isPalindromeString(element));
+            }
+
+            console.log('Question-6');
+            console.log(isPalindrome(['Telugu', 'Kannada', 'Malayalam', 'Tamil']));
+            console.log(isPalindrome(['Hey', 'Hello', 'Hi']));
+            console.log(isPalindrome(['Ha ha', 'He eh', 'Hey eyh']));
+            console.log();
+
+            function isStartsWithString(array, str, len) {
+                return array.find(element => (element.startsWith(str) && element.length === len));
+            }
+            console.log('Question-7');
+            console.log(isStartsWithString(['Telugu', 'Kannada', 'Malayalam', 'Tamil'], 'T', 5));
+            console.log(isStartsWithString(['birch', 'maple', 'bonsai', 'oak', 'poplar'], 'b', 5));
+            console.log(isStartsWithString(['Madhu', 'Madhavi', 'Madhuri', 'Manesha'], 'Madh', 7));
+            console.log();
+
+            function isGreaterThan6AndTypeIndoor(array) {
+                return array.find(element => (element.count > 6 && element.type === 'indoor'));
+            }
+            console.log('Question-8');
+            let tree = [
+                { name: 'birch', count: 10, type: 'outdoor' },
+                { name: 'maple', count: 7, type: 'indoor/outdoor' },
+                { name: 'peace lilly', count: 6, type: 'indoor' },
+                { name: 'oak', count: 2, type: 'outdoor' },
+                { name: 'lucky bamboo', count: 7, type: 'indoor' }
+            ];
+            console.log(isGreaterThan6AndTypeIndoor(tree));
+            console.log();
+        </script>
+    </body>
+
+</html>

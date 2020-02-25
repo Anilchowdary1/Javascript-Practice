@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>RGB App</title>
+    <link rel="stylesheet" href="rgb-app.css" />
+  </head>
+
+  <body>
+    <!--<div id="console-root"></div>
+    <script src="https://tap.ibhubs.in/utils/console.js"></script>
+
+    <!-- Write your html code from here-->
+
+    <div class="rgb-app-container">
+      <div class="left-content" style="order:0" id='left-content'>
+        <div class="background-buttons">
+          <button onclick='changeColorOfLeft("red")' class='red'>Red</button>
+          <button onclick='changeColorOfLeft("blue")' class='blue'>Blue</button>
+          <button onclick='changeColorOfLeft("green")' class='green'>Green</button>
+          <button onclick='changeColorOfLeft("white")' class='white'>White</button>
+        </div>
+
+        <div class="position-keys">
+          <button class='keys' onclick='swapWithLeftChild(this)'><img class='left-key'  src="assets/left-arrow.png"></img></button>
+          <button class='keys' onclick='swapWithRightChild(this)'><img class='right-key'  src="assets/right-arrow.png"></img></button>
+          <button class='keys' onclick='decreaseLeftDivisionHeight()'><img class='up-key'  src="assets/up-arrow.png"></img></button>
+          <button class='keys' onclick='increaseLeftDivisionHeight()'><img class='down-key'  src="assets/down-arrow.png"></img></button>
+        </div>
+      </div>
+
+      <div class="right-content" style="order:1" id='right-content'>
+        <div class="first-child" id="first-child">
+          <div class="background-buttons">
+            <button onclick='changeColorOfRightTop("red")' class='red'>Red</button>
+            <button onclick='changeColorOfRightTop("blue")' class='blue'>Blue</button>
+            <button onclick='changeColorOfRightTop("green")' class='green'>Green</button>
+            <button onclick='changeColorOfRightTop("white")' class='white'>White</button>
+          </div>
+
+          <div class="position-keys">
+            <button class='keys' onclick='swapWithPreviousChild(this)'><img class='up-key' src="assets/up-arrow.png"></img></button>
+            <button class='keys' onclick='swapWithNextChild(this)'><img class='down-key'  src="assets/down-arrow.png"></img></button>
+          </div>
+        </div>
+
+        <div class="second-child" id="second-child">
+
+          <div class="background-buttons">
+            <button onclick='changeColorOfRightMiddle("red")' class='red'>Red</button>
+            <button onclick='changeColorOfRightMiddle("blue")' class='blue'>Blue</button>
+            <button onclick='changeColorOfRightMiddle("green")' class='green'>Green</button>
+            <button onclick='changeColorOfRightMiddle("white")' class='white'>White</button>
+          </div>
+
+          <div class="position-keys">
+            <button class='keys' onclick='swapWithPreviousChild(this)'><img class='up-key' src="assets/up-arrow.png"></img></button>
+            <button class='keys' onclick='swapWithNextChild(this)'><img class='down-key'  src="assets/down-arrow.png"></img></button>
+          </div>
+        </div>
+
+        <div class="third-child" id="third-child">
+          <div class="background-buttons">
+            <button onclick='changeColorOfRightdown("red")' class='red'>Red</button>
+            <button onclick='changeColorOfRightdown("blue")' class='blue'>Blue</button>
+            <button onclick='changeColorOfRightdown("green")' class='green'>Green</button>
+            <button onclick='changeColorOfRightdown("white")' class='white'>White</button>
+          </div>
+
+          <div class="position-keys">
+            <button class='keys' onclick='swapWithPreviousChild(this)'><img class='up-key' src="assets/up-arrow.png"></img></button>
+            <button class='keys' onclick='swapWithNextChild(this)'><img class='down-key'  src="assets/down-arrow.png"></img></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reset-button-container">
+      <button type='button' onclick='resetAll()' class='reset-button' id='reset-button'>&#8635;</button>
+    </div>
+    <script src="rgb-app.js"></script>
+  </body>
+
+</html>

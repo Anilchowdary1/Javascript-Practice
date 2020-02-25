@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css" />
+  </head>
+
+  <body>
+    <div id="console-root"></div>
+    <script src="https://tap.ibhubs.in/utils/console.js"></script>
+    <div class="signup-form" id="signupForm">
+      <div class="select-colors">
+        Select your favourite colors
+        <input type="color" class="input-color" id='color1' value='#0099cc' />
+        <input type="color" class="input-color" id='color2' value='#a300cc' />
+      </div>
+
+      <!--Form body-->
+      <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account!</p>
+        <hr>
+        <form id='form' action="" method="get" class="form-example">
+          <div class="user-name">
+            <input type="text" class='first-name' name="name" id="first-name" placeholder='First Name' required>
+            <input type="text" class='last-name' name="name" id="last-name" placeholder='Last Name' required>
+          </div>
+          <div class="form-element">
+            <input type="digit" name="mobile-number" placeholder='Mobile Number' id="mobile-number" size='65' required>
+          </div>
+          <div class="form-element">
+            <input type="email" name="email" placeholder='Email' id="email" size='65' required>
+          </div>
+          <div class="form-element">
+            <input type="password" name="password" placeholder='Password' id="password" size='65' required>
+          </div>
+          <div class="form-element">
+            <input type="password" name="confirm-password" placeholder='Confirm Password' id="confirmPassword" size='65' required>
+          </div>
+          <div class="gender">
+            <label for="male">Select your gender</label>
+            <input type="radio" name='gender' id='male' value='Male' /><span>Male</span>
+            <input type="radio" name='gender' id='female' value='Female' /><span>Female</span>
+            <input type="radio" name='gender' id='otherGender' value='Other' /><span>Other</span>
+          </div>
+          <div class="select-branch">
+            <label for="branch">Select your branch</label>
+            <select name="branch" id='branch'>
+          <option selected="" value="Default">CSE</option>
+          <option value="ece">ECE</option>
+          <option value="eee">EEE</option>
+          <option value="mech">Mechanical</option>
+          <option value="civil">Civil</option>
+          <option value="mme">MME</option>
+          </select>
+            <label class='dob' for="dob">DOB</label>
+            <input type="date" id='dob' name="dob" placeholder='dd/mm/yy' size='27' required/>
+          </div>
+          <div class="address">
+            <label for="address">Enter your address</label>
+            <textarea name="address" id="address" placeholder='Type your address here!..'></textarea>
+          </div>
+          <div class="typing-speed">
+            <label for="range" size='20'>Select your typing speed</label>
+            <input type="range" name='range' id='slider' min="1" max="100" value="50" class="slider"><span id='typing-speed'>50</span>
+          </div>
+          <div class="terms">
+            <input type="checkbox" id='terms-conditions' name="accept" value="accept" required/>I accept the <span>Terms of Use </span> & <span> Privacy Policy</span>
+          </div>
+          <div class="submit">
+            <button class='signup-button' id='submit' type='button'>Sign Up</button>
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        Already have an account?<a href="login.html">Login here</a>
+      </div>
+    </div>
+    <div id="toast">
+      <p id="desc">Error</p>
+    </div>
+    <script src="sign-up.js"></script>
+  </body>
+
+</html>

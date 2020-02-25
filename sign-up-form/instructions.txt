@@ -1,0 +1,83 @@
+Objective: Develop a signup form by considering below use cases
+
+Usecases:
+
+* User should be able to give valid values to all form fields
+* User should be able to choose the form theme by using color inputs
+
+Field level validations:
+
+* FirstName
+    - Required and alphabets only
+    - Implement validation onblur of the form field
+    - When user enters characters other than alphabets, he should see the corresponding validation error("Invalid Value")
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* LastName 
+    - Required and alphabets only
+    - Implement validation onblur of the form field
+    - When user enters characters other than alphabets, he should see the corresponding validation error("Invalid Value")
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* MobileNumber 
+    - Required and numbers only 
+    - Implement validation onblur of the form field
+    - When user enters characters other than numbers, he should see the corresponding validation error("Invalid Value")
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* Email
+    - Required and must be a valid email
+    - Implement validation onblur of the form field
+    - When user enters characters other than numbers, he should see the corresponding validation error("Invalid Value")   
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* Password 
+    - Required and must have atleast one capital letter and small letter
+    - Implement validation onblur of the form field
+    - When user enters characters other than numbers, he should see the corresponding validation error("Invalid Value")   
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* Confirm Password
+    - Required and must have atleast one capital letter and small letter 
+    - Must match with Password field value
+    - Implement validation onblur of the form field
+    - When user enters an invalid password, he should see the corresponding validation error("Invalid Value")
+    - When user enters a value different from the password field, he should see the corresponding validation error("Invalid Value")    
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* Select your gender
+    - Required and must select a gender
+    - When user clicks signup button with out selecting gender, he should see the corresponding validation error("Required")
+* Select your branch
+    - Default branch will be CSE
+    - Branch Options - CSE, ECE, EEE, Mechanical etc
+* DOB
+    - Required and must be a valid date of birth
+    - Date of birth cannot be allowed to select before year 2002
+    - When user enters an invalid date, he should see the corresponding validation error("Invalid Value")
+    - When user touch and untouch the field, he should see the corresponding validation error("Required")
+* Address
+   - Optional
+* TypingSpeed
+   - Optional
+* TermsAndConditions
+   - Required and must be selected
+   - When user clicks signup button with out checking TermsAndConditions, he should see the corresponding validation error("Required")
+
+Form level validations:
+
+* Signup
+   - When user clicks signup button 
+       - If all the form fields have valid values, user should see an alert("Submitted")
+       - If all the form fields have valid values, user should see the filled values in the console   
+       - If any of the above form fields are invalid according to the field level validation rules defined above, he should see an alert("Invalid Values")  
+
+Note:
+
+* Explore about javascript date function to validate the age
+* Explore about different types of input fields before starting to write the code
+
+
+Follow the below standards:
+
+* All javascript function names should be camelCased
+* All javascript variable names should be camelCased
+* An id attribute should be unique and should be given to single element in the entire HTML
+* All CSS class names should be hyphenated
+* Save constants on the top of javascript file
+* Do less DOM operations as they impact performance
+* Keep meaningful names (Ex: Dont use a,b,c,x,y,z...etc)
