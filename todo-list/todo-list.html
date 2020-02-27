@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="todo-list.css" />
+    </head>
+
+    <body>
+        <div id="console-root"></div>
+        <script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <p class='heading'>todos</p>
+        <div class="todo-container">
+            <div class="list-container">
+                <span class='toggle'>❯</span>
+                <input type="text" id='addElement' class='add-element' placeholder='What needs to be done!' />
+                <ul id='todoList'>
+                </ul>
+            </div>
+            <div class="data-info">
+                <p id='itemsCount'>0 items left</p>
+                <div class="data-status">
+                    <button id='allItems' type='button'>All</button>
+                    <button id='activeItems' type='button'>Active</button>
+                    <button id='completedItems' type='button'>Completed</button>
+                </div>
+                <div class="clear">
+                    <button id='clearCompleted' type='button'>Clear Completed</button>
+                </div>
+            </div>
+        </div>
+        <script src="todo-list.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,23 @@
+
+Objective:
+* Develop a todo list by considering below use cases
+
+Features:
+* User should be able to add a todo
+* User should not be able to add empty todo
+* User should be able to delete a todo
+* User should be asked for confirmation when deleting a todo
+* User should be able to update a todo
+* User should be able to mark a todo as done
+* User should be able to filter all/active/completed todos and see their count
+* User should be able to clear the completed todos
+
+
+Follow the below standards:
+* All javascript function names should be camelCase
+* All javascript variable names should be camelCase
+* An id attribute should be unique and should be given to single element in the entire HTML
+* All CSS class names should be hyphenated
+* Save constants on the top of javascript file
+* Do less DOM operations as they impact performance
+* Keep meaningful names (Ex: Dont use a,b,c,x,y,z...etc)
