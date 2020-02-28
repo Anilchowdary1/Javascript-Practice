@@ -13,22 +13,22 @@
         <div id="console-root"></div>
         <script src="https://tap.ibhubs.in/utils/console.js"></script>
         <p class='heading'>todos</p>
-        <div class="todo-container">
+        <div class="todo-container" id='container'>
             <div class="list-container">
-                <span class='toggle'>❯</span>
+                <span class='toggle' id='all'>❯</span>
                 <input type="text" id='addElement' class='add-element' placeholder='What needs to be done!' />
                 <ul id='todoList'>
                 </ul>
             </div>
-            <div class="data-info">
+            <div class="data-info empty">
                 <p id='itemsCount'>0 items left</p>
                 <div class="data-status">
-                    <button id='allItems' type='button'>All</button>
-                    <button id='activeItems' type='button'>Active</button>
-                    <button id='completedItems' type='button'>Completed</button>
+                    <button class='filter' id='allItems' type='button'>All</button>
+                    <button class='in-active' id='activeItems' type='button'>Active</button>
+                    <button class='in-active' id='completedItems' type='button'>Completed</button>
                 </div>
                 <div class="clear">
-                    <button id='clearCompleted' type='button'>Clear Completed</button>
+                    <button class='in-active' id='clearCompleted' type='button'>Clear Completed</button>
                 </div>
             </div>
         </div>

@@ -2,6 +2,8 @@ const itemsCount = document.getElementById('itemsCount');
 const activeItems = document.getElementById('activeItems');
 const allItems = document.getElementById('allItems');
 const completedItems = document.getElementById('completedItems');
+const selectAll = document.getElementById('all');
+const container = document.getElementById('container');
 let input = document.getElementById('addElement');
 let todoList = document.getElementById('todoList');
 let clearCompletedItems = document.getElementById('clearCompleted');
@@ -10,15 +12,11 @@ let checkList = document.getElementsByClassName('check');
 
 input.onkeypress = (event) => {
     if ((event.keyCode) === 13) {
-        if (event.target.value !== '') {
-            addNewElementTotodoList(event.target.value);
-        }
-        else {
-            alert("todo shouldn't be empty");
-        }
+        addNewElementTotodoList(event.target.value);
     }
 };
 
+//Adding new element to the list
 
 function addNewElementTotodoList(value) {
     if (value !== '') {
@@ -72,18 +70,32 @@ function editStatusOfItems() {
     }
 }
 
+selectAll.onclick = () => {
+    for (let item = 0; item < checkList.length; item++) {
+        checkList[item].checked = true;
+        checkedChecklist(checkList[item]);
+    }
+    updateitemsData();
+};
+
+function checkedChecklist(target) {
+    target.nextElementSibling.className = 'completed';
+    target.nextElementSibling.disabled = true;
+}
+
+function unCheckedChecklist(target) {
+    target.nextElementSibling.disabled = false;
+    target.nextElementSibling.className = 'notCompleted';
+}
+
 function updateCheckListStatus() {
     for (let i = 0; i < checkList.length; i++) {
         (checkList[i].onchange) = function() {
             if (checkList[i].checked) {
-                checkList[i].nextElementSibling.classList.add('completed');
-                checkList[i].nextElementSibling.classList.remove('notCompleted');
-                checkList[i].nextElementSibling.disabled = true;
+                checkedChecklist(checkList[i]);
             }
             else {
-                checkList[i].nextElementSibling.disabled = false;
-                checkList[i].nextElementSibling.classList.remove('completed');
-                checkList[i].nextElementSibling.classList.add('notCompleted');
+                unCheckedChecklist(checkList[i]);
             }
             updateitemsData();
             removeItems();
@@ -95,11 +107,16 @@ function updateCheckListStatus() {
 function removeItems() {
     for (let i = 0; i < removeElementsList.length; i++) {
         removeElementsList[i].onclick = function(event) {
-            let li = event.target.parentElement;
-            li.remove();
-            updateitemsData();
-            updateCheckListStatus();
-            editStatusOfItems();
+            if (confirm('Are you sure?')) {
+                let li = event.target.parentElement;
+                li.remove();
+                updateitemsData();
+                updateCheckListStatus();
+                editStatusOfItems();
+            }
+            else {
+
+            }
         };
     }
 }
@@ -107,11 +124,19 @@ function removeItems() {
 function updateitemsData() {
     let itemsLeft = document.getElementsByClassName('notCompleted');
     let count;
-    if (itemsLeft.length === 1) {
+    if (itemsLeft.length === 0 && checkList.length === 0) {
+        itemsCount.parentElement.classList.add('empty');
+        container.classList.remove('shadow');
+    }
+    else if (itemsLeft.length === 1) {
         count = `${itemsLeft.length} item left`;
+        itemsCount.parentElement.classList.remove('empty');
+        container.classList.add('shadow');
     }
     else {
         count = `${itemsLeft.length} items left`;
+        itemsCount.parentElement.classList.remove('empty');
+        container.classList.add('shadow');
     }
     itemsCount.innerHTML = count;
 }
@@ -146,9 +171,9 @@ completedItems.onclick = (event) => {
     updateCheckListStatus();
     removeItems();
     editStatusOfItems();
-    event.target.style.borderColor = 'rgba(175, 47, 47, 0.2)';
-    event.target.previousElementSibling.style.borderColor = 'white';
-    event.target.previousElementSibling.previousElementSibling.style.borderColor = 'white';
+    event.target.className = 'filter';
+    event.target.previousElementSibling.className = 'in-active';
+    event.target.previousElementSibling.previousElementSibling.className = 'in-active';
 };
 allItems.onclick = (event) => {
     for (let i = 0; i < CompletedItems.length; i++) {
@@ -161,9 +186,9 @@ allItems.onclick = (event) => {
     updateCheckListStatus();
     removeItems();
     editStatusOfItems();
-    event.target.style.borderColor = 'rgba(175, 47, 47, 0.2)';
-    event.target.nextElementSibling.style.borderColor = 'white';
-    event.target.nextElementSibling.nextElementSibling.style.borderColor = 'white';
+    event.target.className = 'filter';
+    event.target.nextElementSibling.className = 'in-active';
+    event.target.nextElementSibling.nextElementSibling.className = 'in-active';
 };
 activeItems.onclick = (event) => {
     for (let i = 0; i < CompletedItems.length; i++) {
@@ -177,7 +202,7 @@ activeItems.onclick = (event) => {
     updateCheckListStatus();
     removeItems();
     editStatusOfItems();
-    event.target.style.borderColor = 'rgba(175, 47, 47, 0.2)';
-    event.target.previousElementSibling.style.borderColor = 'white';
-    event.target.nextElementSibling.style.borderColor = 'white';
+    event.target.className = 'filter';
+    event.target.previousElementSibling.className = 'in-active';
+    event.target.nextElementSibling.className = 'in-active';
 };
