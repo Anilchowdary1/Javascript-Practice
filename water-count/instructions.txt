@@ -1,0 +1,22 @@
+Objective:
+* Develop a water count example by considering below use cases
+
+Features:
+* User should be able to fill the water in the glass when he clicks on the empty glass
+* User should be able to empty the glass when he clicks on the filled glass
+* User should be able to see the increase in water level in the container after filling the glasses
+* User should be able to add more than one glass at a time
+* User should be able to see the decrease in water level in the container after emptying the glasses
+* User should be able to empty more than one glass at a time
+
+
+Follow the below standards:
+* All javascript function names and variable names should be camel case (Ex: firstName)
+* All ids should be camel case
+* All CSS class names should be hyphenated(Ex: form-input)
+* Keep meaningful names (Ex: Don't use a,b,c,ab,bc,x,y,z...etc)
+* Do less DOM operations as they impact performance
+* Don't use inline styles, only use classes
+* Use let if the variable changes, Use const if the variable won't change, Don't use var.
+* Save constants on the top of the javascript file(Ex: Regular expressions, DOMElement variables)
+* An id attribute should be unique and should be given to single element in the entire HTML
