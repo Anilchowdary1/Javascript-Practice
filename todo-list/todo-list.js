@@ -25,6 +25,7 @@ function addNewElementTotodoList(value) {
         let checkbox = createHTMLElement('input');
         let removeElement = createHTMLElement('span');
         element.type = 'text';
+        element.classList.add('content-text');
         element.classList.add('notCompleted');
         element.value = value;
         checkbox.type = 'checkbox';
@@ -41,7 +42,7 @@ function addNewElementTotodoList(value) {
         removeItems();
         updateCheckListStatus();
         editStatusOfItems();
-
+        upload();
     }
     else {
         alert("todo shouldn't be empty!");
@@ -115,7 +116,7 @@ function removeItems() {
                 editStatusOfItems();
             }
             else {
-
+                return;
             }
         };
     }
@@ -175,6 +176,7 @@ completedItems.onclick = (event) => {
     event.target.previousElementSibling.className = 'in-active';
     event.target.previousElementSibling.previousElementSibling.className = 'in-active';
 };
+
 allItems.onclick = (event) => {
     for (let i = 0; i < CompletedItems.length; i++) {
         CompletedItems[i].parentElement.classList.remove('hide');
@@ -197,7 +199,7 @@ activeItems.onclick = (event) => {
     for (let i = 0; i < unCompletedItems.length; i++) {
         unCompletedItems[i].parentElement.classList.remove('hide');
     }
-
+    download();
     updateitemsData();
     updateCheckListStatus();
     removeItems();
@@ -206,3 +208,48 @@ activeItems.onclick = (event) => {
     event.target.previousElementSibling.className = 'in-active';
     event.target.nextElementSibling.className = 'in-active';
 };
+
+window.addEventListener('unload', upload());
+
+function upload() {
+    let allTodos = document.getElementsByClassName('newListItem');
+    let content = {};
+    let checkedItems = [];
+    let data = [];
+    console.log(allTodos);
+    content.data = JSON.stringify(allTodos);
+    /*console.log(data);
+    console.log(todoList);
+    window.localStorage.setItem('tasksList', todoList.innerHTML);
+    window.localStorage.setItem('checkedItemValues', checkedItems);
+    window.localStorage.setItem('dataItems', (data));*/
+    window.localStorage.setItem('content', JSON.stringify(content));
+}
+
+window.onload(download());
+
+function download() {
+    /*todoList.innerHTML = window.localStorage.tasksList;
+    //console.log(todoList);
+    //let presentItems = document.getElementsByClassName('remove');
+    //let data = window.localStorage.dataItems.split(',');
+    /let itemStatus = window.localStorage.checkedItemValues.split(',');
+    if (data != "") {
+        for (let i = 0; i < data.length; i++) {
+            addNewElementTotodoList(data[i]);
+            //presentItems[i].previousElementSibling.value = data[i];
+        }
+        //console.log(todoList);
+        //let checkList = document.getElementsByClassName('check');
+        for (let i = 0; i < itemStatus.length; i++) {
+            if (itemStatus[i] === 'true') {
+                checkList[i].checked = true;
+                //presentItems[i].previousElementSibling.previousElementSibling.checked = true;
+            }
+            //todoList.appendChild(presentItems[i].parentElement);
+        }
+    }*/
+    let bug = window.localStorage.content;
+    console.log(`downloaded`, JSON.parse(bug));
+    //console.log(`checks`, );
+}

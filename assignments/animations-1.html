@@ -3,29 +3,84 @@
 
     <head>
         <style type="text/css">
-            .one,
-            .two,
-            .three {
-                padding: 50px;
+            .box-container {
+                font-size: 20px;
+                font-family: Arial;
             }
 
-            .two {
-                background-color: mistyrose;
+            .box-one {
+                margin: 150px;
+                border-radius: 5px;
+                background-color: royalblue;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                transform-origin: right top;
+                transition: all 0.5s ease-in 0s;
             }
 
-            .three {
-                background-color: coral;
+            .box-two {
+                margin: 50px;
+                margin-left: 150px;
+                border-radius: 5px;
+                background-color: crimson;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                transform-origin: right bottom;
+                transition: all 0.5s ease-in 0s;
             }
 
-            .one {
-                background-color: thistle;
+            .box-three {
+                margin: 50px 150px 150px 250px;
+                border-radius: 5px;
+                background-color: gold;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                transform-origin: left bottom;
+                transition: all 0.5s ease-in 0s;
+            }
+
+            .box-four {
+                margin: 150px 150px 150px 250px;
+                border-radius: 5px;
+                background-color: seagreen;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                transform-origin: left top;
+                transition: all 0.5s ease-in 0s;
+            }
+
+            .inner {
+                margin: 140px 140px 160px 230px;
+                border-radius: 5px;
+                background-color: white;
+                width: 130px;
+                height: 120px;
+                position: absolute;
+            }
+
+            .text {
+                margin: 150px 150px 150px 250px;
+            }
+
+            .active {
+                transform: rotate(1900deg);
+                border-radius: 5px 50%;
+            }
+
+            .rot {
+                transform: rotate(1900deg);
+                border-radius: 50% 5px;
             }
         </style>
     </head>
 
     <body id="console-root">
-        <script src="https://tap.ibhubs.in/utils/console.js"></script>
-        <!--<script type="text/javascript" src="">
+        <!--<script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <script type="text/javascript" src="">
             //setHandler();
             //walkAround();
 
@@ -180,16 +235,20 @@
             //console.log(letters);
 
             //21/02/2020
-        </script>-->
+        </script>-
 
-        <div class="one" id='one'>
-            div one content
-            <div class="two" id="two">
-                div two content
-                <div class="three" id="three">
-                    div three content
-                </div>
-            </div>
+        <form id='loginForm' class='login-form'>
+            <input type="text" class='default-input' placeholder='Name' name="" />
+            <input type="password" class='default-input' placeholder='password' />
+            <button id='submitBtn' class='submit-btn'>Submit</button>
+        </form>
+        -->
+        <div id='box' class="box-container">
+            <div class='inner'>Hi!!</div>
+            <div id='one' class="box-one"></div>
+            <div id='two' class="box-two"></div>
+            <div id='three' class="box-three"></div>
+            <div id='four' class="box-four"></div>
         </div>
         <script type="text/javascript" src="practice.js"></script>
     </body>
