@@ -1,0 +1,55 @@
+.app-container {
+    margin: 60px;
+    max-width: 480px;
+    font-family: sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+button {
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+.status {
+    margin: 10px 10px 10px 5px;
+}
+
+.change-speed {
+    display: flex;
+    justify-content: space-between;
+}
+
+.stopped {
+    background-color: #0F9D58;
+}
+
+.started {
+    background-color: #DB4437;
+}
+
+.enable {
+    background-color: #4285F4;
+}
+
+.disable {
+    background-color: #dddddd;
+}
+
+.stopped:hover {
+    border-color: #00FFBF;
+}
+
+.started:hover {
+    border-color: #F7819F;
+}
+
+.enable:hover {
+    border-color: #00BFFF;
+}

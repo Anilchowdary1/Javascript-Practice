@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Exercise</title>
+        <style type="text/css">
+            .box-container {
+                margin: 50px;
+            }
+
+            .box {
+                padding: 10px;
+                border: 1px solid black;
+                text-align: center;
+            }
+
+            .pause-btn {
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: red;
+                color: #fff;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+
+
+    <body id="console-root">
+        <script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <div class="box-container">
+            <p><span class='box'>R</span><span class='box'>G</span><span class='box'>B</span></p>
+            <button class='pause-btn'>Pause</button>
+        </div>
+        <script type="text/javascript">
+            const boxes = document.querySelectorAll('.box');
+            const colors = ['red', 'green', 'blue'];
+            const pauseButton = document.querySelector('.pause-btn');
+            let previousBox = 0;
+            let timer;
+            let counter;
+            counter = 0;
+
+            function changeBackgroundColor(target, bgColor) {
+                target.style.backgroundColor = bgColor;
+                target.style.color = 'white';
+            }
+
+            function removeBackgroundColor(target) {
+                target.style.backgroundColor = '#fff';
+                target.style.color = 'black';
+            }
+            pauseButton.onclick = function() {
+                clearInterval(timer);
+            }
+            window.addEventListener('load', () => {
+                let currentBox = parseInt(window.localStorage.getItem('Index'));
+                changeBackgroundColor(boxes[currentBox], colors[currentBox]);
+                timer = setInterval(() => {
+                    if (currentBox === 3) {
+                        counter += 1;
+                        currentBox = 0;
+                        previousBox = 2;
+                    }
+                    removeBackgroundColor(boxes[previousBox]);
+                    changeBackgroundColor(boxes[currentBox], colors[currentBox]);
+                    previousBox = currentBox;
+                    currentBox += 1;
+                    if (counter === 5) {
+                        clearInterval(timer);
+                    }
+                }, 1000);
+
+                window.addEventListener('unload', () => {
+                    if (currentBox != 0) {
+                        currentBox -= 1;
+                    }
+                    window.localStorage.setItem('Index', currentBox);
+                });
+            });
+        </script>
+    </body>
+
+</html>

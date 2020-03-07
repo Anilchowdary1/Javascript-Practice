@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Scope</title>
+    </head>
+
+    <body id="console-root">
+        <script src="https://tap.ibhubs.in/utils/console.js"></script>
+        <button id='ui-btn' style='background-color:green; padding:5px'>Click me!</button>
+        <p id='time' style='font-size:30px;color:green;font-family:sans-serif;text-align:center'></p>
+        <p id='count' style='font-size:50px;color:red;font-family:sans-serif;text-align:center'></p>
+        <p id='name'></p>
+        <script type="text/javascript">
+            //Factory function
+            /*function createPerson(name, age, Gender) {
+                //this.gender = Gender;
+                return {
+                    name: name,
+                    age: age,
+                    gender: Gender,
+                    greeting: function() {
+                        return (this.name);
+                    }
+                }
+            }
+            let person1 = createPerson('Anil', 20, 'Male');
+            let greet = person1.greeting;
+            console.log(person1.greeting());
+            window.name = 'he';
+            console.log(greet());
+
+            //console.log(person1);
+
+            //Constructor function
+            function Person(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+                this.greeting = function(name) {
+                    console.log(`Hi ${name}!`);
+                }
+            }
+            let person2 = new Person('Anil', 20, 'Male');
+            // console.log(person2);
+            //Factory unction
+            function createAddress(street, city, zipcode) {
+                return {
+                    street: street,
+                    city: city,
+                    zipcode: zipcode,
+                    showAddress: function() {
+                        console.log(`Street:${street},City:${city},Zipcode:${zipcode}`);
+                    }
+                }
+            }
+            let Address1 = createAddress('Park road', 'Kurnool', '518628');
+            //Address1.showAddress();
+
+            function Address(street, city, zipcode) {
+                this.street = street;
+                this.city = city;
+                this.zipcode = zipcode;
+                this.showAddress = function() {
+                    console.log(`Street:${this.street},City:${this.city},Zipcode:${this.zipcode}`);
+                }
+            }
+            let Address2 = new Address('Chinna Tekur', 'Kurnool', '516330');
+            //Address2.showAddress();
+
+            //04/03/2020
+            const person = {
+                name: 'Anil',
+                noOfLegs: 2,
+                walk: function() {
+                    console.log('Walking!!', this.name);
+                }
+            };
+            //person.walk();
+            person.stop = function() {
+                console.log('Stopped!!', this.name);
+            }
+            //person.stop();
+            function createCar() {
+                console.log('createCar', this.innerHeight);
+            }
+            //createCar();
+
+            const car = {
+                brand: 'Skoda',
+                noOfTyres: 4,
+                start: function() {
+                    console.log('started!!', this.brand);
+                },
+                tyres: ['a', 'b', 'c', 'd'],
+                showTyresList: function() {
+                    const that = this;
+                    this.tyres.forEach(function(tyre) {
+                        //console.log(`${tyre}: ${this.brand}`);
+                    }.bind(this));
+                    this.tyres.forEach(function(tyre) {
+                        //console.log(`${tyre}: ${this.brand}`);
+                    }, this);
+                    for (let tyre of this.tyres) {
+                        //showTyres.call(this, tyre);
+                    }
+                    for (let tyre of this.tyres) {
+                        //showTyres.apply(this, [tyre]);
+                    }
+                }
+            };
+
+            function showTyres(tyre) {
+                console.log(`${tyre}: ${this.brand}`);
+            }
+            car.showTyresList();
+
+            class classRoom {
+                constructor(roomNumber, studentStrength) {
+                    this.roomNumber = roomNumber;
+                    this.studentStrength = studentStrength;
+                    this.sessionStatus = 'Break';
+                    this.fansStatus = 'Off';
+                    this.areACsRunning = false;
+                    this.isSoundSystemOn = false;
+                }
+                switchOnPowerEquipment() {
+                    this.fansStatus = 'On';
+                    this.areACsRunning = true;
+                    this.isSoundSystemOn = true;
+                }
+                switchOffPowerEquipment() {
+                    this.fansStatus = 'Off';
+                    this.areACsRunning = false;
+                    this.isSoundSystemOn = false;
+                }
+                startTeachingSession() {
+                    this.switchOnPowerEquipment();
+                    this.sessionStatus = 'Teaching';
+                }
+                endTeachingSession() {
+                    this.switchOffPowerEquipment();
+                    this.sessionStatus = 'Break';
+                }
+                getClassRoomNumber() {
+                    return (`roomNumber:${this.roomNumber}`);
+                }
+                static sayHello() {
+                    console.log('sayHello Static!');
+                }
+            }
+            const classRoom1 = new classRoom(1, 67);
+            /*classRoom1.sayHello = function() {
+                console.log('sayHello class');
+            }
+            console.log(classRoom.sayHello);
+            classRoom.sayHello();
+            console.log(classRoom1.sayHello);*/
+
+            //Bank Account class
+
+            /*class Account {
+                constructor(name, branchName, accountNumber, ifscCode) {
+                    this.name = name;
+                    this.branchName = branchName;
+                    this.accountNumber = accountNumber;
+                    this.ifscCode = ifscCode;
+                }
+            }
+            class SavingsAccount extends Account {
+                constructor(name, branchName, accountNumber, ifscCode, balance, interestRate) {
+                    super(name, branchName, accountNumber, ifscCode);
+                    this.balance = balance;
+                    this.interestRate = interestRate;
+                }
+            }
+            class CurrentAccount extends Account {
+                constructor(name, branchName, accountNumber, ifscCode, overDraftAmount) {
+                    super(name, branchName, accountNumber, ifscCode);
+                    this.overDraftAmount = overDraftAmount;
+                }
+            }
+            class LoanAccount extends Account {
+                constructor(name, branchName, accountNumber, ifscCode, loanAmount, loanDurationInMonths) {
+                    super(name, branchName, accountNumber, ifscCode);
+                    this.loanAmount = loanAmount;
+                    this.loanDurationInMonths = loanDurationInMonths;
+                }
+            }
+            const savingsAccount = new SavingsAccount('Anil', 'Noida', 1234567890, 'PYTM0123456', 4400, 6.6);
+            const currentAccount = new CurrentAccount('Anil', 'Noida', 1234567890, 'PYTM0123456', 1000);
+            const loanAccount = new LoanAccount('Anil', 'Noida', 1234567890, 'PYTM0123456', 10000, 5);
+            /*console.log(savingsAccount);
+            console.log(currentAccount);
+            console.log(loanAccount);*/
+
+            //setTimeout function
+            const uiBtn = document.getElementById('ui-btn');
+            const time = document.getElementById('time');
+            let timer;
+            let timerIds = [];
+            uiBtn.onclick = function() {
+                console.log(timer);
+                uiBtn.style.backgroundColor = 'red';
+                timer = setTimeout(() => {
+                    uiBtn.style.backgroundColor = 'green';
+                }, 2000);
+                timerIds.push(timer);
+                timer = undefined;
+            }
+            time.onclick = function() {
+                console.log(timerIds);
+                timerIds.forEach((id) => clearTimeout(id));
+                timerIds = [];
+            }
+            const count = document.getElementById('count');
+            let timeInterval = setInterval(countdown, 1000);
+            let t = 10;
+
+            function countdown() {
+                if (t >= 0) {
+                    count.innerHTML = t;
+                    t -= 1;
+                }
+                else {
+                    count.innerHTML = 'Finished..!'
+                    clearInterval(timeInterval);
+                }
+            }
+            let delay = setInterval(myTime, 1000);
+
+            function myTime() {
+                let currentTime = new Date();
+                time.innerHTML = currentTime.toLocaleTimeString();
+            }
+
+            //Exercise
+            const name = document.getElementById('name');
+            //displayName();
+
+            function displayName() {
+                time.innerHTML = 'Anil';
+                setInterval(displaySurname(), 2000);
+            }
+
+            function displaySurname() {
+                time.innerHTML = 'Peddireddy';
+            }
+        </script>
+    </body>
+
+</html>

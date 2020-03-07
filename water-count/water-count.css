@@ -10,8 +10,7 @@ body {
 h2,
 h3 {
     margin-top: 0;
-    display: inline-block;
-    width: 100%;
+    width: 50%;
     text-align: center;
 }
 
@@ -105,4 +104,28 @@ h3 {
 .full {
     background-color: #1ca3eb;
     color: white;
+}
+
+.resetButton {
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: white;
+    color: #1ca3eb;
+    height: 30px;
+    margin-right: 50px;
+    font-size: 14px;
+    border: 2px solid rgb(24, 76, 180);
+    display: block;
+}
+
+.resetButton:hover {
+    background-color: #1ca3eb;
+    color: white;
+}
+
+#days {
+    margin-top: 5px;
+    background-color: #1ca3eb;
+    height: 30px;
+    width: 80px;
 }

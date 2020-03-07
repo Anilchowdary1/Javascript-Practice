@@ -1,0 +1,103 @@
+body {
+    background-color: #f3f3f3
+}
+
+.atm-container {
+    background-color: #fff;
+    margin: 60px;
+    margin-left: 0;
+    max-width: 780px;
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+.deposit-withdraw,
+.balance-history {
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.inactive-btn {
+    color: #4285F4;
+    background-color: #fff;
+}
+
+
+.deposit-withdraw button,
+.balance-history button {
+    width: 180px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #4285F4;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.atm-container button:hover {
+    border: 1px solid #00C6FF;
+}
+
+.hide {
+    display: none;
+}
+
+.withdraw-amount,
+.deposit-amount {
+    height: 30px;
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid blue;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 22px;
+}
+
+.deposit-submit,
+.withdraw-submit {
+    padding: 10px;
+    background-color: #4285F4;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.error-display {
+    color: red;
+    font-size: 14px;
+}
+
+.active-btn {
+    background-color: #4285F4;
+    color: #fff;
+}
+
+table {
+    width: 410px;
+    border-collapse: collapse;
+    margin-left: 18px;
+    margin-top: 20px;
+}
+
+td,
+th {
+    border: 2px solid blue;
+    padding: 8px;
+    text-align: center;
+}
+
+.error-display,
+.resultDisplay {
+    margin-left: 22px;
+}
+
+#historyDetails {
+    margin-left: 22px;
+}
+
+#updatedAmount {
+    font-weight: bold;
+}

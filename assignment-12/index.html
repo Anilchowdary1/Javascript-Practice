@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ATM</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="console-root"></div>
+    <script src="https://tap.ibhubs.in/utils/console.js"></script>
+    <div class="atm-container">
+      <div class="deposit-withdraw">
+        <button class='inactive-btn' id='deposit'>Deposit</button>
+        <button class='inactive-btn' id='withdraw'>Withdraw</button>
+      </div>
+      <div class="balance-history">
+        <button class='inactive-btn' id='showBalance'>Show Balance</button>
+        <button class='inactive-btn' id='history'>History</button>
+      </div>
+      <div class="hide deposit-display">
+        <input type="text" class='deposit-amount' placeholder='Deposit amount' name="amount" />
+        <button class='deposit-submit'>Submit</button>
+      </div>
+      <div class="hide withdraw-display">
+        <input type="text" class='withdraw-amount' placeholder='Withdraw amount' name="amount" />
+        <button class='withdraw-submit'>Submit</button>
+      </div>
+      <div class="error-display"></div>
+      <div class="hide resultDisplay">
+        <p>Current Balance: <span id='updatedAmount'>RS 0</span></p>
+      </div>
+      <p id='historyDetails'></p>
+      <table class='hide' id="transactionTable">
+        <tr>
+          <th>Transaction type</th>
+          <th>Amount in Rs</th>
+          <th>Balance in Rs</th>
+        </tr>
+      </table>
+
+    </div>
+    <script src="index.js"></script>
+  </body>
+
+</html>
